@@ -2,8 +2,8 @@
 // Created by magomed on 13.04.16.
 //
 
-#ifndef MATRIX_MATRIXEXCEPTION_H
-#define MATRIX_MATRIXEXCEPTION_H
+#ifndef matrix_matrixexception_h
+#define matrix_matrixexception_h
 
 #include <iostream>
 
