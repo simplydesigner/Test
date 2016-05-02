@@ -1,5 +1,5 @@
 
-#include "MatrixException.h"
+#include "matrixexception.h"
 
 void MatrixExceptionOutOfRange::exception() {
     cout << "Error: Out of Range\n";
