@@ -105,7 +105,7 @@ int Matrix<A>::get_element(int index1, int index2) const {
             MatrixExceptionOutOfRange tmp;
             throw tmp;
         }
-    } catch (MatrixException &tmp) {
+    } catch (MatrixExceptionOutOfRange &tmp) {
         tmp.exception();
     }
 

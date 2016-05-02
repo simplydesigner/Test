@@ -9,43 +9,21 @@
 
 using namespace std;
 
-class MatrixException {
-public:
-    virtual void exception() = 0;
-    virtual ~MatrixException();
-};
-
-class MatrixExceptionOutOfRange: public MatrixException {
+class MatrixExceptionOutOfRange{
 public:
     void exception();
 };
 
-class MatrixExceptionFileOpen: public MatrixException {
+class MatrixExceptionFileOpen{
 public:
     void exception();
 };
 
-class MatrixExceptionNotEqual: public MatrixException {
+class MatrixExceptionNotEqual{
 public:
     void exception();
 };
 
-
-MatrixException::~MatrixException() {}
-
-void MatrixExceptionOutOfRange::exception() {
-    cout << "Error: Out of Range\n";
-}
-
-
-void MatrixExceptionFileOpen::exception() {
-    cout << "Error: File not is open\n";
-}
-
-
-void MatrixExceptionNotEqual::exception() {
-    cout << "Error: Size not equal\n";
-}
 
 #endif //MATRIX_MATRIXEXCEPTION_H
 

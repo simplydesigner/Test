@@ -1,46 +1,51 @@
-#pragma once
-#include <string>
+//
+// Created by magomed on 13.04.16.
+//
+
+#ifndef MATRIX_MATRIXEXCEPTION_H
+#define MATRIX_MATRIXEXCEPTION_H
+
+#include <iostream>
+
 using namespace std;
-class MatrixException
-{
+
+class MatrixException {
 public:
-  MatrixException(string msg): msg(msg) {};
-private:
-  string msg;
+    virtual void exception() = 0;
+    virtual ~MatrixException();
 };
 
-class SizeException: public MatrixException 
-{
+class MatrixExceptionOutOfRange: public MatrixException {
 public:
-  SizeException(): MatrixException("Sizes don't match") {};
-private:
-  string msg;
+    void exception();
 };
-class SizeException1: public MatrixException 
-{
+
+class MatrixExceptionFileOpen: public MatrixException {
 public:
-  SizeException1(): MatrixException("Sizes don't match for *") {};
-private:
-  string msg;
+    void exception();
 };
-class EmptyException: public MatrixException 
-{
+
+class MatrixExceptionNotEqual: public MatrixException {
 public:
-  EmptyException(): MatrixException("Matrix empty") {};
-private:
-  string msg;
+    void exception();
 };
-class FillException: public MatrixException 
-{
-public:
-  FillException(): MatrixException("Fill error") {};
-private:
-  string msg;
-};
-class RowException: public MatrixException 
-{
-public:
-  RowException(): MatrixException("Row's index") {};
-private:
-  string msg;
-};
+
+
+MatrixException::~MatrixException() {}
+
+void MatrixExceptionOutOfRange::exception() {
+    cout << "Error: Out of Range\n";
+}
+
+
+void MatrixExceptionFileOpen::exception() {
+    cout << "Error: File not is open\n";
+}
+
+
+void MatrixExceptionNotEqual::exception() {
+    cout << "Error: Size not equal\n";
+}
+
+#endif //MATRIX_MATRIXEXCEPTION_H
+

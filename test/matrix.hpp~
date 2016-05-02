@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
-#include "MatrixException.h"
+#include "matrixException.h"
 
 using namespace std;
 
