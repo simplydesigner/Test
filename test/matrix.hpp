@@ -1,3 +1,6 @@
+#ifndef matrix_hpp
+#define matrix_hpp
+
 #include <iostream>
 #include <fstream>
 #include <cstring>
@@ -271,3 +274,5 @@ istream &operator>>(istream &input, Matrix<U> &matr) {
     }
     return input;
 }
+
+#endif
