@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "matrix.h"
+#include "matrix.hpp"
 #include <iostream>
 #include <catch.hpp>
 
